@@ -11,7 +11,9 @@ app.use(express.json())
 app.get('/',(req,res)=>{
     res.json({msg:"You are on main page"})
 })
+
 app.use('/login',require('./routes/login'))
+app.use('/posts',require('./routes/posts'))
 app.listen(port,()=>{
     console.log(`Listening on port http://localhost:${port}`)
 })
